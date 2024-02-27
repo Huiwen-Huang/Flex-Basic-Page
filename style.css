@@ -206,9 +206,6 @@ table {
   padding-left: 20px;
   padding-top: 25px;
   padding-bottom: 25px;
-  /* z-index: 500; */
-  /* opacity: 1; */
-  /* 要思考怎麼讓文字顏色不跟著 slogan 透明 */
 }
 .content {
   margin-bottom: 20px;
@@ -255,9 +252,13 @@ table {
   border-top: 1px solid #d8d7d7;
   border-bottom: 1px solid #d8d7d7;
 }
-.vstable .title {
-  font-weight: 500;
+.vstable th {
+  text-align: left;
   background-color: #f1f1f1;
+  padding: 10px;
+  padding-left: 30px;
+  border-top: 1px solid #d8d7d7;
+  border-bottom: 1px solid #d8d7d7;
 }
 .vstable table td {
   padding: 10px;
@@ -308,20 +309,25 @@ table {
   height: 25px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
+  padding-left: 10px;
 }
 .column .button {
   display: flex;
   flex-direction: row-reverse;
 }
-.column button {
-  font-size: 16px;
+.column .button .submit {
+  width: 80px;
   background: rgb(36, 226, 162);
+  font-size: 16px;
   color: #fff;
   border: 1px solid rgb(36, 226, 162);
   border-radius: 3px;
-  padding: 5px;
-  padding-left: 15px;
-  padding-right: 15px;
+  cursor: pointer;
+  /* 游標變成可點擊的樣式 */
+}
+.column .button .submit:hover {
+  background: #fff;
+  color: rgb(36, 226, 162);
 }
 .footer {
   display: flex;

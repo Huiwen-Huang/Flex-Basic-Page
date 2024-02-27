@@ -315,7 +315,7 @@ table {
   display: flex;
   flex-direction: row-reverse;
 }
-.column .button .submit {
+.column .button input.submit {
   width: 80px;
   background: rgb(36, 226, 162);
   font-size: 16px;
@@ -325,7 +325,7 @@ table {
   cursor: pointer;
   /* 游標變成可點擊的樣式 */
 }
-.column .button .submit:hover {
+.column .button input.submit:hover {
   background: #fff;
   color: rgb(36, 226, 162);
 }

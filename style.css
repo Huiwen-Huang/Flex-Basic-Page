@@ -129,11 +129,11 @@ table {
 }
 /* reset */
 
-.wrap {
+body {
   width: 1024px;
   margin: 0 auto;
 }
-.header {
+header {
   margin-bottom: 10px;
 }
 
@@ -167,16 +167,16 @@ table {
   padding-left: 2px;
   padding-right: 10px;
 }
-.nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav ul {
+nav ul {
   display: flex;
   justify-content: space-around;
 }
-.nav ul a {
+nav ul a {
   display: block;
   padding: 10px;
   text-decoration: none;
@@ -207,7 +207,7 @@ table {
   padding-top: 25px;
   padding-bottom: 25px;
 }
-.content {
+.main {
   margin-bottom: 20px;
 }
 .course {
@@ -220,7 +220,10 @@ table {
   text-align: center;
   padding: 5px;
   line-height: 1.5;
-  border: 1px solid black;
+  border: 1px solid rgb(235, 233, 233);
+  border-top: none;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px rgb(196, 195, 195);
 }
 .course-item h2 {
   font-size: 18px;
@@ -329,14 +332,14 @@ table {
   background: #fff;
   color: rgb(36, 226, 162);
 }
-.footer {
+footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
   margin-bottom: 40px;
 }
-.footer .contact {
+footer .contact {
   background-color: #fff;
 }
 .contact p {

@@ -128,15 +128,25 @@ table {
   border-spacing: 0;
 }
 /* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+/* 全站樣式設定 */
 body {
-  width: 1024px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 header {
   margin-bottom: 10px;
 }
-
 .header-contact {
   background-color: #dedcdc;
 }
@@ -182,15 +192,23 @@ nav ul a {
   text-decoration: none;
   color: rgb(31, 203, 146);
 }
+@media (max-width: 480px) {
+  .header-contact a {
+    font-size: 14px;
+  }
+  nav ul a {
+    font-size: 14px;
+  }
+}
 .banner {
   position: relative;
+  max-width: 1120px;
 }
 .banner img {
   width: 100%;
 }
 .banner .slogan {
   position: absolute;
-  /* position: relative; */
   top: 25%;
   width: 100%;
   height: 150px;
@@ -207,23 +225,43 @@ nav ul a {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+/* 平板 768px 
+所以為了讓平板不會跟手機版一樣可以寫 max-width:767px */
+@media (max-width: 767px) {
+  .banner .slogan {
+    height: 100px;
+    top: 20%;
+  }
+  .banner-title {
+    font-size: 24px;
+    top: 15%;
+  }
+}
 .main {
   margin-bottom: 20px;
 }
 .course {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  /* max-width: 1120px; */
   margin-bottom: 50px;
 }
 .course-item {
-  width: 300px;
+  width: 30%;
   text-align: center;
-  padding: 5px;
+  padding: 10px;
   line-height: 1.5;
   border: 1px solid rgb(235, 233, 233);
   border-top: none;
   border-radius: 5px;
   box-shadow: 0px 3px 5px rgb(196, 195, 195);
+}
+@media (max-width: 767px) {
+  .course-item {
+    width: 100%;
+    margin: 20px;
+  }
 }
 .course-item h2 {
   font-size: 18px;
@@ -250,10 +288,16 @@ nav ul a {
 }
 .vstable table {
   margin: 0 auto;
-  width: 900px;
+  width: 90%;
   /* text-align: center; */
   border-top: 1px solid #d8d7d7;
   border-bottom: 1px solid #d8d7d7;
+}
+@media (max-width: 480px) {
+  .vstable table {
+    font-size: 14px;
+    line-height: 1.5;
+  }
 }
 .vstable th {
   text-align: left;
@@ -289,7 +333,7 @@ nav ul a {
   padding-bottom: 20px;
 }
 .form .info .img {
-  width: 450px;
+  width: 45%;
   height: 250px;
   background-color: #fff;
   margin: 10px;
@@ -297,10 +341,10 @@ nav ul a {
   border-radius: 3px;
 }
 .form .info .column {
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  /* margin-bottom: 30px; */
 }
 .column label {
   color: #fff;
@@ -308,7 +352,7 @@ nav ul a {
   padding-bottom: 5px;
 }
 .column input {
-  width: 450px;
+  width: 100%;
   height: 25px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
@@ -332,6 +376,12 @@ nav ul a {
   background: #fff;
   color: rgb(36, 226, 162);
 }
+@media (max-width: 767px) {
+  .form {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
 footer {
   display: flex;
   justify-content: space-between;
@@ -349,4 +399,23 @@ footer .contact {
 .contact a {
   display: inline;
   color: #e985a6;
+}
+@media (max-width: 1199px) {
+  footer {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+@media (max-width: 480px) {
+  footer {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  footer .logo {
+    width: 51%;
+  }
+  footer .contact {
+    text-align: center;
+  }
 }
